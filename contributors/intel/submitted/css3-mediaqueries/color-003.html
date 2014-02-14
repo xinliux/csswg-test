@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>CSS Media Queries Test: max-color - 100 ('color' property with prefix 'max')</title>
+<link rel="author" title="Intel" href="http://www.intel.com/">
+<link rel="author" title="Xin Liu" href="mailto:xinx.liu@intel.com">
+<link rel="help" title="4.8. device-aspect-ratio" href="http://www.w3.org/TR/css3-mediaqueries/#color">
+<link name="match" href="ref-filled-green-100px-square.xht">
+<meta name="flags" content="">
+<meta name="assert" content="The 'max-color' property set '100' means that only and only if the number of bits per color component of the output device is lower than '100', the style sheet will be applied.">
+<style>
+  div {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+  }
+  @media screen and (max-color: 100) {
+    div {
+      background-color: green;
+    }
+  }
+</style>
+<body>
+  <p>Test passes if there is a filled green square and <strong>no red</strong>.</p>
+  <div></div>
+</body>
